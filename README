@@ -41,7 +41,7 @@
 			
 3.	code in activity：
 	private ActivityLoginBinding binding;
-	binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
+	binding = DataBindingUtil.setContentView(this, R.layout.activity_login); //ActivityLoginBinding 该类型对象自动生成
 	binding.setUser(user); 			
 	binding.setXXX XXX是由布局文件中声明的name关联，首字母改大写，例如：
 	<variable type="com.sumin.bean.User" name="user2"></variable>  binding.setUser2(User user2); 类型对应Bean类
@@ -55,9 +55,32 @@
 		binding.setUser(user);
 		...
 	}
-	public void anOtherMethod(){
+	public void otherMethod(){
 		binding.getUser().setUserName("lisi");
 	}
 	
-5.	
+5.	开发步骤： 
+
+	一、开启数据绑定open file —— build.gradle 
+		android{
+			。。。
+			dataBing{
+				enable true
+			}
+		}
+	
+	二、编写layout文件 与 相应的模型Bean
+		
+		<layout>			public class Bean extends BaseObservable{
+			。。。   			。。。
+		</layout>			}
+	
+	三、数据与模型双向绑定
+	
+		<EditText
+			...
+			andriod:text= "@={user.password}"
+		>
+		
+	
 		
