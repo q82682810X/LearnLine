@@ -47,4 +47,17 @@
 	<variable type="com.sumin.bean.User" name="user2"></variable>  binding.setUser2(User user2); 类型对应Bean类
 	当一个页面绑定多个User时，根据name区分
 	
+4. 获取一个绑定对象 binding.getUser(); 不同的方法对同一个引用进行修改，不需要声明为成员变量，通过binding获取即可。
+	public void init(){
+		...
+		User user = new User();
+		user.setUserName("zansang");
+		binding.setUser(user);
+		...
+	}
+	public void anOtherMethod(){
+		binding.getUser().setUserName("lisi");
+	}
+	
+5.	
 		
