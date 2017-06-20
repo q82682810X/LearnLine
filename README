@@ -39,5 +39,12 @@
 			
 	otherway to change the value of user.username , edittext will change synchronously;
 			
-3.
+3.	code in activity：
+	private ActivityLoginBinding binding;
+	binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
+	binding.setUser(user); 			
+	binding.setXXX XXX是由布局文件中声明的name关联，首字母改大写，例如：
+	<variable type="com.sumin.bean.User" name="user2"></variable>  binding.setUser2(User user2); 类型对应Bean类
+	当一个页面绑定多个User时，根据name区分
+	
 		
