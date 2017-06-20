@@ -2,4 +2,35 @@
 *@author ： sumin	
 *@date   :  2017 - 6 -19
 */
-2017-6-19 :  begin write this note
+2017-6-19 :  begin write this note 
+
+1.	learn the mode —— MVVM		----------------------------------------------------------------------------------------------
+		<layout>
+			<data>
+				<variable></variable>
+			</data>
+			<root-layout>
+				......
+			</root-layout>
+		</layout>
+
+2017-6-20 ： 		
+2.  public class Bean extends BaseObservable(“绑定UI实时更新”){
+
+		private String username;
+		
+		@Bindable
+		public String getUsername() {
+			return username;
+		}
+	
+	}
+	
+	xml： <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:text="@={user.username}" />   =====>> @=  “双向绑定”
+			
+3.
+		
