@@ -1,0 +1,21 @@
+   //<editor-fold desc="点击两次退出">
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (!isExit) {
+                isExit = true;
+                Toasts.getInstance().showToastShort("再按一次退出");
+                new Timer().schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        isExit = false;
+                    }
+                }, 2000);
+                return true;
+            }
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    private static Boolean isExit = false;
+    //</editor-fold>
