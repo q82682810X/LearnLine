@@ -1,0 +1,22 @@
+项目Gradle配置
+	buildscript {  
+	  repositories {  
+		mavenCentral()  
+	   }  
+	  dependencies {  
+>>		classpath 'com.jakewharton:butterknife-gradle-plugin:8.6.0'  
+	  }  
+	}  
+	
+Modeul Gradle配置
+
+	apply plugin: 'com.android.library'  
+>>	apply plugin: 'com.jakewharton.butterknife'  
+	  
+	dependencies {  
+	  compile 'com.jakewharton:butterknife:8.6.0'  
+>>	  annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'  
+	}  
+		
+		
+友情链接：http://blog.csdn.net/luoguopeng/article/details/72582904

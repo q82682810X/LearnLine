@@ -83,4 +83,66 @@
 		>
 		
 	
+===============================================================================================================================
+learn point : android material design  | recyclerview | swiperefreshlayout | android 兼容包
+
+ANDROID MATERIAL DESIGN ：Gradle 配置：  compile 'com.android.support:design:26.0.0-alpha1'
+
+Material Text Input
+	优化了EditText ,显示提示在获取焦点时，以动画形式跑到控件上方提示
+	
+	<android.support.design.widget.TextInputLayout
+		android:id="@+id/textinput"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<EditText
+			android:id="@+id/edittext"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="What is your name?" />
+	
+	</android.support.design.widget.TextInputLayout>
+	
+	
+Floating Action Buttons
+	每个按钮都可以用icons和colors很容易地进行自定义。
+	
+	<android.support.design.widget.FloatingActionButton
+		android:id="@+id/fab"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="end|bottom"
+		android:layout_margin="16dp"
+		android:src="@drawable/ic_fab" />
+	
+	
+NavigationView	
+	NavigationView是一个新的部件继承了DrawerLayout的功能。开发者使用这个组件能很容易地添加头布局到drawer 和标记已选择的部分。
+	
+	<android.support.v4.widget.DrawerLayout      xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/drawer_layout"
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:fitsSystemWindows="true">
+
+		<include layout="@layout/content"/>
+
+		<android.support.design.widget.NavigationView
+			android:id="@+id/nav_view"
+			android:layout_height="match_parent"
+			android:layout_width="wrap_content"
+			android:layout_gravity="start"
+			android:fitsSystemWindows="true"
+			app:headerLayout="@layout/nav_header"
+			app:menu="@menu/drawer_view"/>
+	</android.support.v4.widget.DrawerLayout>
 		
+
+Snackbar 	
+	Snackbar 比Toast功能有所增强，使用它需要注意的是需要创建一个可以被用来找到应用显示的最底部的View。
+
+		
+	
+	
