@@ -82,6 +82,8 @@
 			andriod:text= "@={user.password}"
 		>
 		
+	四、注意：一个Activity只可以绑定一个DataBinding，因为在绑定过程中会执行setContentView，重复绑定会把之前的界面给覆盖了。
+		
 	
 ===============================================================================================================================
 learn point : android material design  | recyclerview | swiperefreshlayout | android 兼容包
